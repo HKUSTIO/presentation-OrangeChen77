@@ -43,9 +43,9 @@
 \usepackage{hyperref}
 
 % Title page information
-\title{Presentation Title}
-\subtitle{Subtitle}
-\author{Your Name}
+\title{An Industrial Organization Perspective on Productivity}
+\subtitle{The Second Half}
+\author{CHEN Jie}
 \institute{Hong Kong University of Science and Technology}
 \date{\today}
 
@@ -62,53 +62,494 @@
 \end{frame}
 
 % Section 1
-\section{Introduction}
-\begin{frame}{Introduction}
+\section{Empirical Facts About Productivity at the Producer Level}
+\begin{frame}{Empirical Facts About Productivity at the Producer Level}
     \begin{itemize}
-        \item First point
-        \item Second point
-        \item Third point
+        \item Dispersion
+        \item Persistence
+        \item Correlations
+    \end{itemize}
+\end{frame}
+
+% Dispersion
+\begin{frame}{Dispersion}
+    \begin{block}{Definition}
+        \textbf{Productivity Dispersion} refers to \textbf{the range of differences in productivity levels} among production units within an economy.
+    \end{block}
+    
+    \begin{itemize}
+        \item \textbf{Distribution Spread}: Whether most firms have similar productivity levels (low dispersion) or if there's a wide gap between highly productive leader firms and less productive laggard firms (high dispersion).
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Dispersion}
+    \begin{block}{Measurement}
+        \textbf{90-10 percentile TFP ratio} refers to the TFP level of the entity at the 90th percentile of the TFP distribution divided by the TFP level of the entity at the 10th percentile of the TFP distribution.
+    \end{block}
+
+    \begin{itemize}
+        \item The 90th percentile represents \textbf{the top 10\% most productive};\\
+        the 10th percentile represents \textbf{the bottom 10\% least productive}.
+        \item Example: The typical manufacturing industry in the U.S. or Canada has a 90-10 percentile TFP ratio of roughly \textbf{2:1}.
+    \end{itemize}
+\end{frame}
+
+
+% Persistence
+\begin{frame}{Persistence}
+    Persistence:
+    \begin{itemize}
+        \item Producers near the top end of their industry distribution in this period are likely to be near the top in the next period.
+        Low-productivity producers are similarly likely to stay that way.
+        \item Whatever factors influence producers' productivity levels, they have \textbf{staying power}.
+        \item Rule out \textbf{classical measurement error or white-noise productivity process} as sources of the documented productivity dispersion.
+    \end{itemize}
+\end{frame}
+
+% Correlations
+\begin{frame}{Correlations}
+    Higher productivity producers are:
+    \begin{itemize}
+        \item More profitable,
+        \item Larger,
+        \item Faster-growing,
+        \item More likely to survive,
+        \item Low price-setters,
+        \item Higher-wage payers.
     \end{itemize}
 \end{frame}
 
 % Section 2
-\section{Methods}
-\begin{frame}{Methods}
-    \begin{block}{Important Block}
-        Key information goes here
-    \end{block}
-    
+\section{A Simple Model of Equilibrium Productivity Dispersion}
+\begin{frame}{A Simple Model of Equilibrium Productivity Dispersion}
     \begin{itemize}
-        \item Method 1
-        \item Method 2
+        \item Demand
+        \item Supply
+        \item Equilibrium
+        \item Empirical Implications
     \end{itemize}
 \end{frame}
 
-% Section 3
-\section{Results}
-\begin{frame}{Results}
-    \begin{columns}
-        \column{0.5\textwidth}
+\begin{frame}{Assumptions}
+    \begin{itemize}
+        \item \textbf{Industry Structure}: There exists an industry comprising a continuum of producers.
+        \item \textbf{Product Differentiation}: Each producer \(i\) offers a unique product (variety), with the set of varieties denoted by \(\mathrm{I}\).
+        \item \textbf{Consumers}: There is a representative consumer whose preferences cover all product varieties within the industry.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Assumptions}
+    \begin{itemize}
+        \item \textbf{Production Technology}: Producer \(i\) uses a linear production technology, 
+        \[
+            Q_i = \Omega_i X_i,
+        \]
+        where \(X_i\) is a composite input with price \(P^X\). This implies that each producer has a constant marginal cost:
+    \[
+        c_i = \frac{P^X}{\Omega_i}.
+    \]
+    Differences in cost \(c_i\) reflect differences in productivity \(\Omega_i\).
+        \item   \textbf{Market Entry}: Potential producers must pay a fixed entry cost \( f_E \) to learn their productivity \( \Omega_i \). Productivity is drawn from a specific distribution.
+        \[
+            G(\Omega) = 1 - \frac{\Omega_M}{\Omega}, \quad \Omega \in [\Omega_M, \infty)
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Demand}
+    Representative Consumer Utility Function:
+    \[
+    U = y + \alpha \int_{i \in I} Q_i \, di - \frac{\eta}{2} \left( \int_{i \in I} Q_i \, di \right)^2 - \frac{\gamma}{2} \int_{i \in I} Q_i^2 \, di
+    \]
+    where \(y\) is the quantity of a numeraire good, \(Q_i\) is the quantity of variety \(i\) consumed, and \(\alpha > 0\), \(\eta > 0\), and \(\gamma \geq 0\).
+    \begin{itemize}
+        \item \(\alpha\) and \(\eta\) index the substitution pattern between the differentiated varieties and the numeraire good.
+        \item \(\gamma\) indexes the degree of substitutability between the differentiated varieties.
         \begin{itemize}
-            \item Result 1
-            \item Result 2
+            \item \(\gamma\) is large, implying that substitutability is low.
+            \item \(\gamma \to 0\) implies perfect substitutability.
         \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Demand}
+    \begin{itemize}
+        \item \textbf{Consumer Budget Constraint:}
+        \[
+        y + \int_{i \in I} p_i Q_i \, di = E,
+        \]
+        where \( E \) is total expenditure.
+        \item \textbf{Utility Maximization:} Set up the Lagrangian:
+        \[
+        L = y + \alpha \int_{i \in I} Q_j \, dj 
+          - \frac{\eta}{2} \left( \int_{i \in I} Q_j \, dj \right)^2 
+          - \frac{\gamma}{2} \int_{i \in I} Q_j^2 \, dj 
+          + \lambda \left( E - y - \int_{i \in I} p_j Q_j \, dj \right).
+        \]
+        \item \textbf{FOCs:}
+            \begin{itemize}
+                \item With respect to \( y \):
+                \[
+                \frac{\partial L}{\partial y} = 1 - \lambda = 0 \implies \lambda = 1.
+                \]
+                \item With respect to \( Q_i \):
+                \[
+                \frac{\partial L}{\partial Q_i} = \alpha - \eta \left( \int_{i \in I} Q_j \, dj \right) - \gamma Q_i - \lambda p_i = 0.
+                \]
+            \end{itemize}
         
-        \column{0.5\textwidth}
-        % Placeholder for a figure
-        \centering
-        [Your figure here]
-    \end{columns}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Demand}
+    \begin{itemize}
+        \item \textbf{Inverse Demand Function:} Substitute \( \lambda = 1 \) into the FOC for \( Q_i \) to get the inverse demand function for variety \( i \):
+        \[
+        p_i = \alpha - \eta \int_{i \in I} Q_j \, dj - \gamma Q_i.
+        \]
+        Let \( Q = \int_{i \in I} Q_j \, dj \) represent the total quantity consumed in the market. Then:
+        \[
+        p_i(Q_i, Q) = \alpha - \eta Q - \gamma Q_i.
+        \]
+        This shows that the price of variety \( i \) depends on its own sales \( Q_i \) and the total market sales \( Q \).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Supply}
+    Producer \(i\) choooses \(Q_i\) to maximize profit \(\pi_i\).
+    \begin{itemize}
+        \item Profit Function:
+        \[
+        \pi_i = p_i Q_i - c_i Q_i.
+        \]
+        \item Insert inverse demand function:
+        \[
+        \pi_i = (\alpha - \eta Q - \gamma Q_i) Q_i - c_i Q_i.
+        \]
+        \item Solve for optimal \(Q_i\) by FOC:
+        \[
+        Q_i(c_i) = \frac{\alpha - \eta Q - c_i}{2\gamma}.
+        \]        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Supply}
+    \begin{itemize}
+        \item Optimal Price:
+        \[
+        p_i(c_i) = \alpha - \eta Q - \gamma Q_i = \frac{1}{2} (\alpha - \eta Q + c_i).
+        \]
+        \item Optimal Profit:
+        \[
+        \pi_i(c_i) = (p_i - c_i) Q_i = \frac{(\alpha - \eta Q - c_i)^2}{4\gamma}.  
+        \]
+        \item Optimal revenue:
+        \[
+        r_i(c_i) = p_i Q_i = \frac{(\alpha - \eta Q)^2 - c_i^2}{4\gamma}.
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Supply}
+    Define the cutoff cost \(c_D = \alpha - \eta Q \). A producer \(i\) will only produce in the market and earn non-negative profits if its marginal cost \( c_i \leq c_D \).\\
+    \begin{itemize}
+        \item Optimal Quantity:  
+        \[
+          Q_i = \frac{c_D - c_i}{2\gamma}
+        \]
+        \item Optimal Price:  
+        \[
+          p_i = \frac{c_D + c_i}{2}
+        \]
+        \item Optimal Profit:  
+        \[
+          \pi_i(c_i) = \frac{(c_D - c_i)^2}{4\gamma} \quad \text{(only if } c_i \leq c_D\text{)}
+        \]
+        \item Optimal Revenue:
+        \[
+        r_i(c_i) = p_i Q_i = \frac{c_D^2 - c_i^2}{4\gamma} \quad \text{(only if } c_i \leq c_D\text{)}
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Equilibrium}
+    Recall: Productivity is drawn from a specific distribution: \(G(\Omega) = 1 - \frac{\Omega_M}{\Omega}, \quad \Omega \in [\Omega_M, \infty)\). Alternatively, costs \(c\) are drawn from \textbf{a uniform distribution on \([0, c_M]\)}, where \(c_M\) is the upper bound and \(c_D \leq c_M\)
+    \begin{itemize}
+        \item \textbf{Free entry condition}: The expected benefit of paying for a productivity draw equals the entry cost \(f_E\):
+        \[
+        \int_{0}^{c_{D}} \frac{(c_{D} - c)^{2}}{4\gamma} \cdot \frac{1}{c_{M}} \, \mathrm{d}c = f_{E}
+        \]
+        \item \textbf{Solving for the equilibrium cutoff cost \(c_D\)}:
+        \[
+        c_D = (12 \gamma c_{M} f_{E})^{1/3}
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Empirical Implications}
+    Equilibrium cutoff cost \(c_D\):
+    \[
+    c_D = (12 \gamma c_{M} f_{E})^{1/3}
+    \]
+    \begin{itemize}
+        \item \textcolor{red}{\textbf{Productivity Dispersion}:} How much dispersion exists in equilibrium depends on the magnitudes of \(\gamma\) and \(f_E\).
+        \begin{itemize}
+            \item \textbf{As substitutability falls (\(\gamma\) rises)}, consumers are less willing to shift their purchases from one variety to another, which makes it easier for higher-cost producers to profitably operate, \textbf{reducing \(\Omega_D\)}.
+            \item \textbf{Higher entry costs \(f_E\)} protect producers with low productivity draws from competition by limiting the mass of producers that take entry draws, \textbf{reduceing \(\Omega_D\)}.
+        \end{itemize}
+        \item \textcolor{red}{\textbf{Productivity Persistence}:} As the model is static and all producers have fixed productivity draws.
+        \begin{itemize}
+            \item Asplund and Nocke (2006): Include models with similar structures that allow more dynamic productivity process.
+        \end{itemize} 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Empirical Implications}
+    Size and suivival
+    \begin{itemize}
+        \item \textbf{Size}: Recall
+        \[
+          Q_i = \frac{c_D - c_i}{2\gamma}
+        \]
+        Equilibrium quantities decline in the producer's marginal cost.
+        \item \textbf{Suivival}: Firms do not produce when receiving a productivity draw too low to be profitable in equilibrium.
+    \end{itemize}
+\end{frame}
+
+
+% Section 3
+\section{Productivity Analysis}
+\begin{frame}{Productivity Analysis}
+    \begin{itemize}
+        \item Producer-level productivity analysis
+        \begin{itemize}
+            \item Identifying producer-level drivers
+            \item Sources of productivity differences
+        \end{itemize}
+        \item Aggregate analysis
+        \begin{itemize}
+            \item Sources of aggregate productivity gains
+            \item Potential output losses due to inefficient production
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Identify Producer-level Drivers}
+    Standard approach:
+    \[
+    \omega_{it} = \delta A_{it} + \text{controls} + \epsilon_{it}
+    \]
+    \begin{itemize}
+        \item First estimate productivity \(\omega_{it}\) and then use a regression model to analyze the impact of potential drivers \(A_{it}\).
+        \item \textbf{Exogenous Drivers:} the impact of policy reforms on firm-level productivity, e.g., tax incentives.
+        \item \textbf{Endogenous Drivers:} the results of the producer's own actions, e.g., R\&D investments.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Identify Producer-level Drivers}
+    Standard approach:
+    \[
+    \omega_{it} = \delta A_{it} + \text{controls} + \epsilon_{it}
+    \]
+    Challenges with standard approaches:
+    \begin{itemize}
+        \item \textbf{Internal consistency issue}: Refers to contradictions or lack of logical coherence in the relationships between assumptions and variables within a model.
+        \item \textbf{Endogeneity issue}: Endogenous drivers are chosen by the producer, and direct regression leads to biased estimates.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Identify Producer-level Drivers}
+    Improved Methods:
+    \[
+    \omega_{it} = g(\omega_{it-1}, A_{it-1}) + \xi_{it}.
+    \]
+    \textbf{Incorporate the driver \(A\) directly into the law of motion \(g(.)\) for productivity.}
+    \begin{itemize}
+        \item Achieves internal consistency by integrating the driver into the dynamic process of productivity.
+        \item Allows drivers to have heterogeneous effects on productivity.
+        \item Reference:
+        \begin{itemize}
+            \item De Loecker (2013): Investigates "learning-by-exporting" by including past export experience \(A_{it-1}\) in the law of motion, identifying significant heterogeneous effects of exporting on future productivity.
+            \item Doraszelski and Jaumandreu (2018): Uses detailed R\&D data for Spanish producers to estimate the impact of innovation on productivity, confirming dispersion in R\&D effectiveness across producers with different productivity levels.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sources of productivity differences}
+    Managerial Practices:
+    \begin{itemize}
+        \item Bloom and Van Reenen(2007): Confirms a robust positive correlation exists between the quality of managerial practices and firm productivity.
+        \item \textbf{Operational management}: How the producer coordinates its production process.
+        \begin{itemize}
+        \item Target setting and evaluation
+        \item Inventory management
+        \item Human capital management
+        \item Customer relationship management
+        \end{itemize}
+        \item \textbf{Strategic management}: How the producer its primary scope of operations.
+        \begin{itemize}
+        \item Selection of product offerings
+        \item Identification of target markets
+        \end{itemize}
+        \item \textbf{Manager effect}: Distinguishing manager-specific effects from practice-specific effects is crucial for \textbf{understanding transferability and policy implications}.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sources of productivity differences}
+    Intangible Capital: 
+    \begin{itemize}
+        \item \textbf{Definition:} Assets that contribute to production but are difficult or impossible to measure directly. e.g., reputation, brand equity, production know-how, organizational culture.
+        \item \textbf{Specific intangibles affect different aspects:}
+        \begin{itemize}
+            \item Production know-how potentially boosts TFPQ through technical efficiency.
+            \item Brand capital primarily enhances TFPR via pricing power.
+        \end{itemize}
+        \item \textbf{Empirical approach:} Utilize proxies for intangible capital to link them to firm performance and productivity.\\
+        \begin{itemize}
+            \item Reference: Saunders and Brynjolfsson (2016); Peters and Taylor (2017); Crouzet and Eberly (2020)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Aggregate Analysis}
+    \begin{itemize}
+        \item Sources of aggregate productivity gains
+        \item Potential output losses due to inefficient production
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Aggregate Industry Productivity}
+    In empirical research, aggregate industry productivity is typically measured as a share-weighted average of producer-level productivity.
+    \[
+    A_t = \sum_i s_{it} \omega_{it}
+    \]
+    \begin{itemize}
+        \item \( \omega_{it} \) denotes the productivity of producer \( i \) in period \( t \).
+        \item \( s_{it} \) represents the share weight of producer \( i \) in period \( t \). This weight is often based on the share of sales.
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Sources of aggregate productivity gains}
+    Olley-Pakes(1996) Decomposition Method:
+    \[
+    A_t = \bar{\omega}_t + \text{cov}_t(s_{it}, \omega_{it})
+    \]
+    where \( \bar{\omega}_t \): The unweighted average productivity of producers in period \( t \).
+    \begin{itemize}
+        \item \textbf{Within-Producer effect}: Refers to increases or decreases in the productivity of incumbent producers, captured by \( \bar{\omega}_t \).
+        \begin{itemize}
+            \item Technological progress, managerial improvements, or R\&D investments
+        \end{itemize}
+        \item \textbf{Between-Producer effect}: Involves the redistribution of market share among producers with different productivity levels, captured by \(\text{cov}_t(s_{it}, \omega_{it})\).
+        \begin{itemize}
+            \item \textbf{Positive Covariance}: Indicates that producers with higher market shares tend to have higher productivity.
+            \item \textbf{Increasing Covariance}: Implies a strengthening reallocation effect, contributing positively to aggregate productivity growth.
+            \item Increased competition, deregulation, or technological change.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sources of aggregate productivity gains}
+    Collard-Wexler and De Loecker (2015): 
+    \begin{itemize}
+        \item \textbf{Context:} Examined the impact of the introduction and diffusion of a new technology (minimills) in the steel industry on industry productivity.
+        \item \textbf{Methodology:} First estimated a production function to recover plant-level productivity estimates, then performed within-between decompositions to help identify the sources of industry productivity growth. 
+        \item \textcolor{red}{\textbf{Findings:}}
+        \begin{itemize}
+            \item \textbf{Between effect:} The shift in market share from older technology to the new technology accounted for approximately one-third of the industry's productivity growth.
+            \item \textbf{Within effect:} Even surviving firms using the older technology achieved substantial productivity gains under competitive pressure.
+        \end{itemize}
+        \item \textcolor{red}{\textbf{Implication:}} Underscores the crucial interplay between reallocation effects driven by technological change and within-firm improvement effects in understanding aggregate productivity dynamics.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Potential Output Losses Due to Inefficient Production}
+    Asker et al. (2019): Market power and Production Inefficiency Loss
+    \begin{itemize}
+        \item \textbf{Background:}
+        \begin{itemize}
+            \item OPEC: An intergovernmental organization and its member countries are among the world's major oil exporters, possessing substantial low-marginal-cost oil reserves compared with non-OPEC producers.
+            \item OPEC cartel: Regarded as functioning like a cartel by coordinating oil production levels to influence global oil prices.
+        \end{itemize}
+        \item \textbf{Research context:} Analyzed the impact of the OPEC cartel on the efficiency of global crude oil production.
+        \item \textbf{Perspective:} Emphasized the production inefficiency loss caused by market power, distinct from the traditional quantity distortion.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Potential Output Losses Due to Inefficient Production}
+    Asker et al. (2019): Market power and Production Inefficiency Loss
+    \begin{itemize}
+        \item \textbf{Methodology:} Quantified the production inefficiency loss due to OPEC's market power by comparing the actual allocation of oil production with a counterfactual cost-minimizing allocation, holding total output constant.
+        \item \textcolor{red}{\textbf{Findings:}}
+        \begin{itemize}
+            \item The net present value of the welfare loss resulting from this misallocation was estimated to be substantial, around \$750 billion. 
+            \item This loss component can be conceptualized as a \textbf{"Welfare Rectangle"}, capturing the increased production cost at a given output level.
+        \end{itemize}
+        \item \textcolor{red}{\textbf{Implication:}} Market power can induce significant welfare losses not only by restricting output but also by distorting the allocation of production across producers with varying efficiencies.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Potential Output Losses Due to Inefficient Production}
+    Hsieh and Klenow (2009): Wedge Approach and Misallocation
+    \begin{itemize}
+        \item \textbf{Key Point:} In an idealized, perfectly competitive, frictionless economy, the Marginal Revenue Product (MRP) of any given input factor should be equalized across all producers using it.
+        \item \textbf{Methodology:} 
+        \begin{itemize}  
+            \item Interpreted the observed dispersion in MRPs across producers in reality as evidence of underlying market frictions or distortions (termed "wedges").
+            \item These wedges prevent resources from flowing to their highest MRP users, thus causing misallocation.
+        \end{itemize}
+        \item \textcolor{red}{\textbf{Findings:}} Applying this approach to manufacturing data from China and India, they estimated that if capital and labor were reallocated to equalize MRPs to the extent observed in the U.S. manufacturing sector, manufacturing TFP could increase by \textbf{30-50\% in China and 40-60\% in India.}
+    \end{itemize}
 \end{frame}
 
 % Section 4
-\section{Conclusion}
-\begin{frame}{Conclusion}
+\section{Conclusion and Future Work}
+\begin{frame}{Conclusion and Future Work}
+    Main Findings:
     \begin{itemize}
-        \item Main finding 1
-        \item Main finding 2
-        \item Future work
+        \item \textbf{Productivity Disperision:} Substantial productivity differences exist among firms within the same industry.
+        \item \textbf{Producer-Level Drivers:} Managerial practices and intangible capital investments significantly influence firm-level productivity variations.
+        \item \textbf{Aggregate Productivity Gains:} Both within-producer improvements and between-producer reallocation effects contribute to industry productivity growth.
+        \item \textbf{Efficiency Losses:} Market power and resource misallocation create significant potential output losses.
     \end{itemize}
 \end{frame}
 
-\end{document} 
+
+
+\begin{frame}{Conclusion and Future Work}
+    Future Work: Measuring market power using production data.\\
+    \textbf{Define Markup:}
+    \[
+    \mu \equiv \frac{P}{c}
+    \]
+    where c denotes marginal cost.
+    \begin{itemize}
+        \item \textbf{Production Approach:}
+        \[
+        \mu_{it} \equiv \theta_{it}^V \frac{P_{it} Q_{it}}{P_{it}^V X_{it}^V}
+        \]
+        where \(\theta_{it}^V\) represents the output elasticity with respect to the input \(X^V\).
+        \begin{itemize}
+            \item Assumption: Producers minimize cost by optimally choosing those inputs that are free from frictions in a given period.
+            \item Key Point: Cost minimization of a variable input of production.
+            \[
+            \min_{X^V} P^V X^V \quad \text{s.t.} \quad Q = F(X^V, X^F)
+            \]
+        \end{itemize}
+        \item De Loecker and Warzynski (2012): Markups and firm level export status.
+    \end{itemize}
+\end{frame}
+
+\end{document}
